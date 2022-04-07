@@ -1,0 +1,29 @@
+<!-- Enter the two number and add it and shows its results using js -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        Enter 1st number <input type="number" id="n1"> <br> Enter 2nd number <input type="number" id="n2">
+        <br> <button id="btn">submit</button>
+    </form>
+</body>
+<script>
+    function calculation() {
+        a = document.getElementById("n1").value;
+        a = parseInt(a)
+        b = document.getElementById("n2").value;
+        b = parseInt(b)
+        document.write("The sum between given number is ", a + b)
+    }
+    document.getElementById("btn").addEventListener("click", calculation)
+</script>
+
+</html>

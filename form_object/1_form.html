@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form action="">
+        select your favoriate country: <select name="select" id="">
+            <option value="0">select</option>
+            <option value="Nepal">nepal</option>
+            <option value="Canada">canada</option>
+            <option value="USA">USA</option>
+            <option value="Norway">Norway</option>
+        </select>
+        <button onclick="check(this.form)">submit</button>
+    </form>
+</body>
+<script>
+    function check(v) {
+        c = v.select.selectedIndex;
+        // The selectedIndex property sets or returns the index of the selected option in a drop - down list.
+        // The index starts at 0.
+        b = v.select.options[c].value;
+        // The options collection returns a collection of all <option> elements i.e array in a drop-down list.
+        if (c == 0) {
+            alert("please select a country")
+        } else {
+            document.write("selected country is ", b)
+        }
+    }
+</script>
+
+</html>

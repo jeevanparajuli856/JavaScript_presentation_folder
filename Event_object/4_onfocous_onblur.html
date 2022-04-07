@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- the onfocus event occurs when an element gets focus. It is most often used in input select and anchor tag. The onblur event occur when an object loses focus -->
+
+<body style="font-size: 25px;">
+    <form action="">
+        Enter name:<input type="text" placeholder="enter your name" id="a">
+    </form>
+    <!-- n html onfocus and on blur is not run in latest version -->
+    <p id="b"></p>
+</body>
+<script>
+    function focus() {
+        document.getElementById("b").innerHTML = "input box is in focus"
+        document.getElementById("b").style.color = "red"
+    }
+
+    function blur() {
+        document.getElementById("b").innerHTML = "input box is blur"
+        document.getElementById("b").style.color = "blue"
+    }
+    document.getElementById("a").addEventListener("focus", focus)
+    document.getElementById("a").addEventListener("blur", blur)
+</script>
+
+</html>

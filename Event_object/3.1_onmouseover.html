@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-size: 25px; color: brown;">
+    <p id="a">This is demo</p>
+</body>
+<script>
+    function over() {
+        document.getElementById("a").innerHTML = "mouse is over me"
+        document.getElementById("a").style.color = "red"
+    }
+
+    function out() {
+        document.getElementById("a").innerHTML = "mouse is out"
+        document.getElementById("a").style.color = "blue"
+    }
+    document.getElementById('a').addEventListener("mouseover", over)
+    document.getElementById('a').addEventListener("mouseout", out)
+</script>
+
+</html>

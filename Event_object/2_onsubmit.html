@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- onsubmit is occur used while form is submitted -->
+
+<body style="font-size:25px">
+    <form action="submit" onsubmit="alert('form is submited')">
+        <input type="submit" name="submit" value="submit me"></form>
+    <form id="a" action="submit">
+        <input type="submit" name="submit" value="secondMethod"></form>
+</body>
+<script>
+    document.getElementById("a").addEventListener("submit", function() {
+        alert("second method trigger")
+    })
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-size: 25px;">
+    <form action="" id="a">
+        select your favoriate car brand: <select name="select" id="b">
+            <option value="0">select</option>
+            <option value="BMW">BMW</option>
+            <option value="Mclaren">Mclaren</option>
+            <option value="Audi">Audi</option>
+            <option value="Mercedes">Mercedes</option>
+        </select>
+        <button id="btn">submit</button>
+    </form>
+</body>
+<script>
+    function form() {
+        a = document.forms[0];
+        //intead of this we can do getElementById("a")
+        b = a.select.selectedIndex; //Instead of this dpcument.getElementById("b").selectedIndex
+        c = a.select.options[b].value;
+        if (b == 0) {
+            alert("please select a car brand")
+        } else {
+            document.write("selected country is ", c)
+        }
+
+
+    }
+    document.getElementById("btn").addEventListener("click", form);
+</script>
+
+</html>
